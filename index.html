@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pexeso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="game-controls">
+            <button id="restart">Restartovat hru</button>
+            <label for="grid-size">Velikost mřížky: </label>
+            <select id="grid-size">
+                <option value="4">4x4</option>
+                <option value="6">6x6</option>
+            </select>
+        </div>
+        <div id="game-info">
+            <div id="turn">Hráč 1 je na tahu</div>
+            <div id="moves">Počet tahů: 0</div>
+            <div id="score">
+                <span>Hráč 1: <span id="score-player1">0</span></span>
+                <span>Hráč 2: <span id="score-player2">0</span></span>
+            </div>
+        </div>
+        <div id="game-board"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+#game-board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100px;            
+    height: 100px;           
+    position: relative;      
+    display: flex;           
+    align-items: center;     
+    justify-content: center; 
+    border: 1px solid #ccc;  
+    background-color: #fff;  
+    overflow: hidden;       
+    border-radius: 10px;    
+}
+
+.card.flipped {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card.matched {
+    opacity: 50%;
+    cursor: not-allowed;
+}
+
+.card img {
+    max-width: 100%;         
+    max-height: 100%;        
+    object-fit: contain;     
+}
