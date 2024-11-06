@@ -33,15 +33,14 @@ const images = [
     'images/img15.jpg',
     'images/img16.jpg',
     'images/img17.jpg',
-    'images/img18.jpg',
-
+    'images/img18.jpg'
 ]; 
 
+// Generate a new board
 function generateBoard() {
     board = [];
-    
     const numPairs = (gridSize * gridSize) / 2;
- 
+
     let selectedImages = images.slice(0, numPairs);
   
     while (selectedImages.length < numPairs) {
@@ -59,8 +58,10 @@ function generateBoard() {
     });
 
     createBoardUI();
+    updateGameInfo(); // Reset game info display on restart
 }
 
+// Shuffle the images for random placement
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -69,6 +70,7 @@ function shuffle(array) {
     return array;
 }
 
+// Create the board UI
 function createBoardUI() {
     gameBoard.innerHTML = ''; 
     gameBoard.style.gridTemplateColumns = `repeat(${gridSize}, 100px)`; 
@@ -83,6 +85,7 @@ function createBoardUI() {
     });
 }
 
+// Flip a card
 function flipCard(index) {
     const card = board[index];
 
@@ -98,6 +101,7 @@ function flipCard(index) {
     }
 }
 
+// Check if two flipped cards match
 function checkMatch() {
     const [firstIndex, secondIndex] = flippedCards;
     const firstCard = board[firstIndex];
@@ -107,6 +111,7 @@ function checkMatch() {
         firstCard.matched = true;
         secondCard.matched = true;
 
+        // Update scores based on the current player
         if (currentPlayer === 1) {
             player1Score++;
         } else {
@@ -129,7 +134,7 @@ function checkMatch() {
     }
 }
 
-
+// Update the board UI to reflect flipped and matched cards
 function updateBoardUI() {
     board.forEach((card, index) => {
         const cardElement = gameBoard.children[index];
@@ -152,10 +157,36 @@ function updateBoardUI() {
     });
 }
 
-gridSizeSelect.addEventListener('change', () => {
-    gridSize = parseInt(gridSizeSelect.value);
-    generateBoard();
-    updateGameInfo();
+// Update game information (current player, moves, scores)
+function updateGameInfo() {
+    turnDisplay.textContent = `Hráč ${currentPlayer} je na tahu`;
+    movesDisplay.textContent = `Počet tahů: ${moveCount}`;
+    scorePlayer1Display.textContent = player1Score;
+    scorePlayer2Display.textContent = player2Score;
+}
+
+// Handle the restart button
+restartButton.addEventListener('click', () => {
+    // Reset the game variables
+    player1Score = 0;
+    player2Score = 0;
+    currentPlayer = 1;
+    moveCount = 0;
+    gridSize = parseInt(gridSizeSelect.value); // Get the selected grid size
+    generateBoard(); // Generate a new board
 });
 
+// Update grid size on selection change and restart the game
+gridSizeSelect.addEventListener('change', () => {
+    gridSize = parseInt(gridSizeSelect.value); // Update the grid size based on the selection
+    // Reset the game variables and generate a new board
+    player1Score = 0;
+    player2Score = 0;
+    currentPlayer = 1;
+    moveCount = 0;
+    generateBoard(); // Regenerate the board with the new grid size
+    updateGameInfo(); // Update game info (score, moves, turn)
+});
+
+// Initialize the game
 generateBoard();
