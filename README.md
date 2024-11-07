@@ -39,12 +39,14 @@ Here’s how you can interact with the game:
 
 To change the picture sets, place different pictures in the `images` folder. The number of pictures required varies depending on the game grid size:
 
-- **1:1 format** for optimal viewing
-- **img<number>.jpg** images need to be numbered and named or renamed in the code.
-
 - **8 pictures** for a 4x4 grid
 - **18 pictures** for a 6x6 grid
 - **32 pictures** for an 8x8 grid
+
+Make sure that images are ready to be used:
+
+- **1:1 format** for optimal viewing
+- **img1.jpg** images need to be numbered and named (or renamed in the code).
 
 ### Customizing Background and Logo
 
