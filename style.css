@@ -1,3 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    background-color: gray; 
+  }
+  
+  body {
+    width: 100%;
+  }
+
 #game-board {
     display: grid;
     gap: 10px;
@@ -12,15 +25,21 @@
     display: flex;           
     align-items: center;     
     justify-content: center; 
-    border: 1px solid #ccc;  
     background-color: #fff;  
     overflow: hidden;       
-    border-radius: 10px;    
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  
+
+    background-image: url('images/cropped-lb-gif-1.png');   
+    background-size: cover; 
+    background-position: center; 
+    
 }
 
+
 .card.flipped {
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.5); 
+    border: rgba(0, 0, 0, 0); 
 }
 
 .card.matched {
