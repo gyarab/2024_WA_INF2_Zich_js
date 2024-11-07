@@ -9,21 +9,20 @@
 <body>
     <div id="app">
         <div id="game-controls">
-            <button id="restart">Restartovat hru</button>
-            <label for="grid-size">Velikost mřížky: </label>
-            <select id="grid-size">
+            <button id="restart" class="text">Back to Starting Line</button>
+            <label for="grid-size" class="text">Race Track Size: </label>
+            <select id="grid-size" class="text">
                 <option value="4">4x4</option>
                 <option value="6">6x6</option>
                 <option value="8">8x8</option>
-
             </select>
         </div>
         <div id="game-info">
-            <div id="turn">Hráč 1 je na tahu</div>
-            <div id="moves">Počet tahů: 0</div>
-            <div id="score">
-                <span>Hráč 1: <span id="score-player1">0</span></span>
-                <span>Hráč 2: <span id="score-player2">0</span></span>
+            <div id="turn" class="text">Player 1 is Overtaking</div>
+            <div id="moves" class="text">Number of Overtakes: 0</div>
+            <div id="score" class="text">
+                <span>Racer 1: <span id="score-player1">0</span></span>
+                <span>Racer 2: <span id="score-player2">0</span></span>
             </div>
         </div>
         <div id="game-board"></div>

@@ -151,8 +151,8 @@ function updateBoardUI() {
 }
 
 function updateGameInfo() {
-    turnDisplay.textContent = `Hráč ${currentPlayer} je na tahu`;
-    movesDisplay.textContent = `Počet tahů: ${moveCount}`;
+    turnDisplay.textContent = `Racer ${currentPlayer} is Overtaking`;
+    movesDisplay.textContent = `Number of Overtakes: ${moveCount}`;
     scorePlayer1Display.textContent = player1Score;
     scorePlayer2Display.textContent = player2Score;
 }
@@ -166,7 +166,6 @@ restartButton.addEventListener('click', () => {
     generateBoard(); 
 });
 
-
 gridSizeSelect.addEventListener('change', () => {
     gridSize = parseInt(gridSizeSelect.value); 
    
@@ -177,6 +176,5 @@ gridSizeSelect.addEventListener('change', () => {
     generateBoard(); 
     updateGameInfo(); 
 });
-
 
 generateBoard();
