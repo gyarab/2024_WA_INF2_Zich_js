@@ -9,7 +9,13 @@ html, body {
   
   body {
     width: 100%;
-  }
+    margin: 0;  
+    background-image: url('images/jdmFlag.png');  
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
 
 #game-board {
     display: grid;
@@ -30,7 +36,7 @@ html, body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  
 
-    background-image: url('images/cropped-lb-gif-1.png');   
+    background-image: url('images/LBWKLogo.png');   
     background-size: cover; 
     background-position: center; 
     
