@@ -33,7 +33,21 @@ const images = [
     'images/img15.jpg',
     'images/img16.jpg',
     'images/img17.jpg',
-    'images/img18.jpg'
+    'images/img18.jpg',
+    'images/img19.jpg',
+    'images/img20.jpg',
+    'images/img21.jpg',
+    'images/img22.jpg',
+    'images/img23.jpg',
+    'images/img24.jpg',
+    'images/img25.jpg',
+    'images/img26.jpg',
+    'images/img27.jpg',
+    'images/img28.jpg',
+    'images/img29.jpg',
+    'images/img30.jpg',
+    'images/img31.jpg',
+    'images/img32.jpg'
 ]; 
 
 function generateBoard() {
@@ -124,7 +138,7 @@ function checkMatch() {
     updateGameInfo();
 
     if (board.every(card => card.matched)) {
-        setTimeout(() => alert(`Hra skončila! Vítěz: Hráč ${player1Score > player2Score ? 1 : 2}`), 500);
+        setTimeout(() => alert(`Race Finished! Racer ${player1Score > player2Score ? 1 : 2} Won`), 500);
     }
 }
 

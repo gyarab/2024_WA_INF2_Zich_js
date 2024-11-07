@@ -2,7 +2,7 @@
     -webkit-font-smoothing: antialiased;
     size: 1.5em;
     color: white;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5); 
+    text-shadow: 0 0 0.1em rgba(0, 0, 0, 0.5); 
     font-family: 'LibertyWalk', sans-serif;
 }
 
@@ -23,7 +23,6 @@
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);  
     text-align: center;
 }
-
     
 html, body {
     height: 100%;
@@ -33,16 +32,15 @@ html, body {
     justify-content: center;  
     align-items: center;
     background-color: gray; 
+    background-image: url('images/background.jpg');  
+    background-size: cover; 
+    background-repeat: repeat;
+    background-position: center;
   }
   
   body {
     width: 100%;
     margin: 0;  
-    background-image: url('images/jdmFlag.png');  
-    background-size: cover; 
-    background-repeat: no-repeat;
-    background-position: center;
-
 }
 
 #game-board {
@@ -63,7 +61,7 @@ html, body {
     overflow: hidden;           
     border-radius: 0.7em;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);  
-    background-image: url('images/LBWKLogo.png');   
+    background-image: url('images/logo.png');   
     background-size: cover; 
     background-position: center; 
 }
